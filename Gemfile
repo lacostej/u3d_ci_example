@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'fastlane'
-REPO_ROOT = File.expand_path(File.join('..', '..'))
-gem 'u3d', path: REPO_ROOT
+gem 'u3d'
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
 # rubocop:disable Eval
