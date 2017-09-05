@@ -36,14 +36,14 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         
-      # Database setup
-      # - run: bundle exec rake db:create
-      # - run: bundle exec rake db:schema:load
-
       - run:
           name: install unity
           command: |
             bundle exec rake u3d_install
+          environment:
+            # circleci is sudo passwordless. We still need to tell u3d.
+            # you might need to hide from the config if you have different environment
+            U3D_PASSWORD: ""
       # run tests!
       - run:
           name: run tests
