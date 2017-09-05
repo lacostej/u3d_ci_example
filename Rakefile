@@ -2,6 +2,7 @@
 
 task :u3d_install do
   system("u3d install")
+  system("u3d dependencies")
 end
 
 task :u3d_load_save_scenes do
