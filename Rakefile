@@ -1,7 +1,7 @@
 # Example integration of u3d
 
 task :u3d_install do
-  system("u3d install")
+  system("u3d install --verbose")
   system("u3d dependencies")
 end
 
